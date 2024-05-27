@@ -152,11 +152,33 @@ class TaskApp:
         root.mainloop()
 
 
+    def add_task(self):
+        name = self.name_entry.get()
+        title = self.title_entry.get()
+        description = self.description_entry.get()
+        due_date = self.due_date_entry.get()
+
+        task = Task(name, title, description, due_date)
+        self.task_manager.add_task(task)
+        print("Task added successfully.")
+
+        self.name_entry.delete(0, tk.END)
+        self.title_entry.delete(0, tk.END)
+        self.description_entry.delete(0, tk.END)
+        self.due_date_entry.delete(0, tk.END)
 
 
 
 
 
+
+
+
+
+
+if __name__ == "__main__":
+    root = tk.Tk()
+    task_app = TaskApp(root)
 
 
 # if __name__ == "__main__":

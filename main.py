@@ -104,55 +104,74 @@ class TaskManager:
                 tasks_dict = json.load(file)
                 self.task_list.from_dict(tasks_dict)
 
-if __name__ == "__main__":
-    task_manager = TaskManager()
-    
-    while True:
-        print("\nTask Manager")
-        print("1. Add Task")
-        print("2. Remove Task")
-        print("3. List Tasks")
-        print("4. Mark Task as Completed")
-        print("5. Exit")
 
-        choice = input("Enter your choice: ")
+class TaskApp:
+    def __init__(self, root):
+        self.task_manager = TaskManager()
+        self.root = root
+        self.root.title = "To-Do-List App"
+        self.root.geometry("600x600")
+        self.root.resizable(False, False)
+
+    # input frame
+
+
+
+
+
+
+
+
+
+# if __name__ == "__main__":
+#     task_manager = TaskManager()
+    
+#     while True:
+#         print("\nTask Manager")
+#         print("1. Add Task")
+#         print("2. Remove Task")
+#         print("3. List Tasks")
+#         print("4. Mark Task as Completed")
+#         print("5. Exit")
+
+#         choice = input("Enter your choice: ")
         
-        if choice == "1":
-            task = task_manager.input_task()
-            task_manager.add_task(task)
-            print("Task added successfully.")
+#         if choice == "1":
+#             task = task_manager.input_task()
+#             task_manager.add_task(task)
+#             print("Task added successfully.")
         
-        elif choice == "2":
-            task_name = input("Enter the task name to remove: ")
-            task_to_remove = task_manager.task_list.find_task_by_name(task_name)
-            if task_to_remove:
-                task_manager.remove_task(task_to_remove)
-                print("Task removed successfully.")
-            else:
-                print("Task not found.")
+#         elif choice == "2":
+#             task_name = input("Enter the task name to remove: ")
+#             task_to_remove = task_manager.task_list.find_task_by_name(task_name)
+#             if task_to_remove:
+#                 task_manager.remove_task(task_to_remove)
+#                 print("Task removed successfully.")
+#             else:
+#                 print("Task not found.")
         
-        elif choice == "3":
-            tasks = task_manager.get_tasks()
-            if not tasks:
-                print("No tasks available.")
-            else:
-                for task in tasks:
-                    status = "Completed" if task.completed else "Pending"
-                    print(f"Name: {task.name}, Title: {task.title}, Description: {task.description}, Due Date: {task.due_date}, Status: {status}")
+#         elif choice == "3":
+#             tasks = task_manager.get_tasks()
+#             if not tasks:
+#                 print("No tasks available.")
+#             else:
+#                 for task in tasks:
+#                     status = "Completed" if task.completed else "Pending"
+#                     print(f"Name: {task.name}, Title: {task.title}, Description: {task.description}, Due Date: {task.due_date}, Status: {status}")
         
-        elif choice == "4":
-            task_name = input("Enter the task name to mark as completed: ")
-            task_to_mark = task_manager.task_list.find_task_by_name(task_name)
-            if task_to_mark:
-                task_to_mark.mark_completed()
-                task_manager.save_tasks()
-                print("Task marked as completed.")
-            else:
-                print("Task not found.")
+#         elif choice == "4":
+#             task_name = input("Enter the task name to mark as completed: ")
+#             task_to_mark = task_manager.task_list.find_task_by_name(task_name)
+#             if task_to_mark:
+#                 task_to_mark.mark_completed()
+#                 task_manager.save_tasks()
+#                 print("Task marked as completed.")
+#             else:
+#                 print("Task not found.")
         
-        elif choice == "5":
-            print("Exiting Task Manager.")
-            break
+#         elif choice == "5":
+#             print("Exiting Task Manager.")
+#             break
         
-        else:
-            print("Invalid choice. Please try again.")
+#         else:
+#             print("Invalid choice. Please try again.")

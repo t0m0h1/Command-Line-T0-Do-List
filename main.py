@@ -2,6 +2,8 @@ import json
 import os
 import tkinter as tk
 
+
+
 class Task:
     def __init__(self, name, title, description, due_date):
         self.name = name
@@ -114,7 +116,15 @@ class TaskApp:
         self.root.geometry("600x600")
         self.root.resizable(False, False)
 
-    # input frame
+        # input frame
+        self.input_frame = tk.Frame(self.root)
+        self.input_frame.pack(pady=10)
+
+        # input fields
+        self.name_label = tk.Label(self.input_frame, text="Name:")
+        self.name_label.pack()
+        self.name_entry = tk.Entry(self.input_frame)
+        self.name_entry.pack()
 
 
 

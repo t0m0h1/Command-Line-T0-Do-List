@@ -126,6 +126,22 @@ class TaskApp:
         self.name_entry = tk.Entry(self.input_frame)
         self.name_entry.pack()
 
+        self.title_label = tk.Label(self.input_frame, text="Title:")
+        self.title_label.pack()
+        self.title_entry = tk.Entry(self.input_frame)
+        self.title_entry.pack()
+
+        self.description_label = tk.Label(self.input_frame, text="Description:")
+        self.description_label.pack()
+        self.description_entry = tk.Entry(self.input_frame)
+        self.description_entry.pack()
+
+
+
+
+
+        root.mainloop()
+
 
 
 

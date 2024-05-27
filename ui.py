@@ -10,3 +10,11 @@ class UI(tk.Tk):
 
     def run(self):
         self.mainloop()
+
+
+if __name__ == '__main__':
+    app = UI()
+    app.run()
+
+
+    

@@ -167,6 +167,18 @@ class TaskApp:
         self.description_entry.delete(0, tk.END)
         self.due_date_entry.delete(0, tk.END)
 
+        tasks = self.task_manager.get_tasks() # get all tasks
+        for task in tasks:
+            if task.completed:
+                status = "Completed"
+            else:
+                status = "Pending"
+
+
+
+    # placeholder 
+    def remove_task(self):
+        pass
 
 
 

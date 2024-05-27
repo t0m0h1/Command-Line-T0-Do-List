@@ -176,8 +176,19 @@ class TaskApp:
 
 
 
+    def is_valid_date(self, date):
+        if date.count("/") != 2:
+            return False
+        else:
+            return True
+
+
+
     # placeholder 
     def remove_task(self):
+        pass
+
+    def display_tasks(self):
         pass
 
 

@@ -121,20 +121,28 @@ class TaskApp:
         self.input_frame.pack(pady=10)
 
         # input fields
-        self.name_label = tk.Label(self.input_frame, text="Name:")
+        self.name_label = tk.Label(self.input_frame, text="Name: ")
         self.name_label.pack()
         self.name_entry = tk.Entry(self.input_frame)
         self.name_entry.pack()
 
-        self.title_label = tk.Label(self.input_frame, text="Title:")
+        # label fields
+        self.title_label = tk.Label(self.input_frame, text="Title: ")
         self.title_label.pack()
         self.title_entry = tk.Entry(self.input_frame)
         self.title_entry.pack()
 
-        self.description_label = tk.Label(self.input_frame, text="Description:")
+        # description fields
+        self.description_label = tk.Label(self.input_frame, text="Description: ")
         self.description_label.pack()
         self.description_entry = tk.Entry(self.input_frame)
         self.description_entry.pack()
+
+        # due date fields
+        self.due_date_label = tk.Label(self.input_frame, text="Due Date: MM/DD/YYYY")
+        self.due_date_label.pack()
+        self.due_date_entry = tk.Entry(self.input_frame)
+        self.due_date_entry.pack()
 
 
 

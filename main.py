@@ -146,7 +146,7 @@ class TaskApp:
 
         # add task button
         self.add_task_button = tk.Button(self.input_frame, text="Add Task", command=self.add_task)
-        self.add_task_button.pack()
+        self.add_task_button.pack(pady=10)
 
         # main frame
         root.mainloop()

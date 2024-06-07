@@ -12,6 +12,7 @@ class Task:
         self.due_date = due_date
         self.completed = False
 
+
     def set_title(self, title):
         self.title = title
 
@@ -117,6 +118,7 @@ class TaskApp:
         self.root.title("To-Do-List App")
         self.root.geometry("600x600")
         self.root.resizable(False, False)
+        self.root.config(bg="white")
 
         # Input frame
         self.input_frame = tk.Frame(self.root)
